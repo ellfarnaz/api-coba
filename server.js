@@ -8,7 +8,11 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
-let students = [];
+let students = [
+  { name: "Alice", nim: "123456789" },
+  { name: "Bob", nim: "987654321" },
+  { name: "Charlie", nim: "192837465" },
+];
 
 app.get("/students", (req, res) => {
   res.json(students);
